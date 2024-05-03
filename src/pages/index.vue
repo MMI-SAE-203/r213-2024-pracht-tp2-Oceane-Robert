@@ -1,6 +1,6 @@
 <script setup lang="ts">
-
 import type { MaisonRecord } from '@/types'
+import MaisonCard from '@/components/MaisonCard.vue'
 
 const maisonsListe: MaisonRecord[] = [
   {
@@ -96,4 +96,5 @@ console.log(maisonsListe)
 
 <template>
   <h1 class="text-2xl">Bonjour monde !</h1>
+  <MaisonCard v-bind="maisonsListe[0]" />
 </template>
