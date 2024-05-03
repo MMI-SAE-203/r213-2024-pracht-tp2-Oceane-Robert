@@ -1,19 +1,8 @@
 <script setup lang="ts">
-const maisonsListe: {
-  adresse: string
-  collectionId: string
-  collectionName: string
-  created: string
-  favori: boolean
-  id: string
-  image: string[]
-  nbChambres: number
-  nbSdb: number
-  nomMaison: string
-  prix: number
-  surface: number
-  updated: string
-}[] = [
+
+import type { MaisonRecord } from '@/types'
+
+const maisonsListe: MaisonRecord[] = [
   {
     adresse: 'Chemin de la Loubre Bartouille, 06850 Briançonnet, France ',
     collectionId: 'rv28856lfscmmzm',
