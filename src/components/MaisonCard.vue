@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { MaisonRecord } from '@/type'
 
+import ImgPb from './ImgPb.vue';
+
 const props = defineProps<MaisonRecord>()
 </script>
 <template>
@@ -11,8 +13,7 @@ const props = defineProps<MaisonRecord>()
       <div
         class="w-[342px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500"
       ></div>
-      <img src="" class="w-[342px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover" />
-    </div>
+    <ImgPb :record="props" :filename="image" class="w-[342px] h-[230px] absolute left-[-0.5px] top-[-24.5px] object-cover" />    </div>
     <div
       class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-5 py-[30px]"
     >
@@ -40,6 +41,7 @@ const props = defineProps<MaisonRecord>()
           xmlns="http://www.w3.org/2000/svg"
           class="flex-grow-0 flex-shrink-0 w-12 h-12"
           preserveAspectRatio="xMidYMid meet"
+          :style="{ fill: favori ? '#6366F1' : 'white' }"
         >
           <circle
             cx="24"
