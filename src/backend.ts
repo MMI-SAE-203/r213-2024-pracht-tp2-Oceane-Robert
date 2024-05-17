@@ -17,3 +17,9 @@ export async function allMaisonsSorted() {
     return maisonListe
 }
 
+export async function getMaisonById(id: string) {
+        const maison = await pb.collection('maison').getOne(id);
+        return maison;
+}
+
+
