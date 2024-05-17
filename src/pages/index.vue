@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { MaisonRecord } from '@/types'
+import type { MaisonRecord } from '@/type'
 import MaisonCard from '@/components/MaisonCard.vue'
+import { allMaisonsFavori } from '@/backend';
 
-const maisonsListe: MaisonRecord[] = [
+/* const maisonsListe: MaisonRecord[] = [
   {
     adresse: 'Chemin de la Loubre Bartouille, 06850 Briançonnet, France ',
     collectionId: 'rv28856lfscmmzm',
@@ -82,8 +83,9 @@ const maisonsListe: MaisonRecord[] = [
     surface: 160,
     updated: '2024-04-11 12:34:05.062Z'
   }
-]
+] */
 
+const maisonsListe = await allMaisonsFavori()
 console.log(maisonsListe)
 </script>
 
@@ -93,4 +95,7 @@ console.log(maisonsListe)
     v-for="maison in maisonsListe" 
     :key="maison.id" 
     v-bind="maison"
-  /></template>
+  />
+</template>
+
+
