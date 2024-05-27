@@ -82,7 +82,7 @@ export type CollectionResponses = {
 // https://github.com/pocketbase/js-sdk#specify-typescript-definitions
 
 export type TypedPocketBase = PocketBase & {
-	collection(idOrName: 'Agent'): RecordService<AgentResponse>
+	collection(idOrName: 'agent'): RecordService<AgentResponse>
 	collection(idOrName: 'maison'): RecordService<MaisonResponse>
 	collection(idOrName: 'users'): RecordService<UsersResponse>
 }

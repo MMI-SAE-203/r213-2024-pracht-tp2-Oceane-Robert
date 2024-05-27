@@ -23,3 +23,18 @@ export async function getMaisonById(id: string) {
 }
 
 
+export async function allEventsByArtisteId(id: string) {
+  const sorteRecordsArtiste = await pb.collection('maison').getFullList({
+    expand: 'agent',
+    filter: `agent.id = "${id}"`
+  })
+  return sorteRecordsArtiste
+}
+
+export async function allAgentSorted() {
+  const agentListe = await pb.collection('agent').getFullList({
+    sort: '-created'
+  })
+  return agentListe
+}
+

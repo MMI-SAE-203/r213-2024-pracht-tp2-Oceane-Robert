@@ -12,4 +12,19 @@ export interface MaisonRecord {
   prix: number
   surface: number
   updated: string
+  agent: string
 }
+
+export interface AgentRecord {
+  collectionId: string
+  collectionName: string
+  created: string
+  id: string
+  Nom: string
+  Prenom: string
+  Adresse: string
+  Numerotelephone: number
+  e_mail: string
+  updated: string
+}
+
